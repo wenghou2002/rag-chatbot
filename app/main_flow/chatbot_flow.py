@@ -72,9 +72,6 @@ class ChatbotFlowService:
             uuid=request.uuid #testing purpose only needed to be remove
         )
         
-        print(f"conversation_history{conversation_history}")
-        print(f"customer_summary{customer_summary}")
-        
         # Step 5: Generate AI response
         print("🤖 Generating OpenAI response...")
         ai_response = await openai_service.generate_response(
