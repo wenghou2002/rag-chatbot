@@ -41,7 +41,8 @@ class ChatbotFlowService:
         conversation_history, session_id, customer_summary, use_hybrid = await memory_service.get_conversation_context_optimized(
             request.phone_number
         )
-        # Step 2: Log memory strategy and performance
+
+        # Step 2: Log memory strategy and performance (will be remove later)
         memory_time = int((time.time() - memory_start) * 1000)
         print(f"📝 Memory: {len(conversation_history)} turns, {memory_time}ms, Session: {session_id}")
         
@@ -67,9 +68,9 @@ class ChatbotFlowService:
         kb_sections = await context_service.build_sections(
             intents=intents, 
             query=expanded_query, 
-            analysis=analysis
+            analysis=analysis,
+            uuid=request.uuid #testing purpose only needed to be remove
         )
-        print(f"📖 KB sections: {kb_sections}")
         
         # Step 5: Generate AI response
         print("🤖 Generating OpenAI response...")
@@ -79,8 +80,9 @@ class ChatbotFlowService:
             customer_summary=customer_summary,
             kb_sections=kb_sections,
             intents=intents,
+            uuid=request.uuid #testing purpose only needed to be remove
         )
-        print(f"✅ AI Response generated: {len(ai_response)} chars")
+        print(f"✅ AI Response generated: {len(ai_response['response'])} chars")
         
         # Step 6: Calculate metrics and prepare response
         response_time_ms = int((time.time() - start_time) * 1000)

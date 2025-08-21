@@ -21,8 +21,8 @@ class UnderstandingService:
 
         last_turns: list of {"user_message": str, "ai_response": str}
         """
-        # Keep only last 2 turns for reference
-        short_ctx = last_turns[-2:] if last_turns else []
+        # Keep only last 5 turns for reference (can change to 2 turns later on)
+        short_ctx = last_turns[-5:] if last_turns else []
         ctx_text = "\n".join(
             [
                 f"User: {t['user_message']}\nAssistant: {t['ai_response']}" for t in short_ctx

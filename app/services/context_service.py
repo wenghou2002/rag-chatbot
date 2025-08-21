@@ -4,7 +4,7 @@ Builds KB sections from configured sources based on detected intent and query.
 Extensible: add new sections (e.g., FAQ_KB) without changing routers or LLM code.
 """
 
-from typing import Dict, List
+from typing import Dict, List, Optional
 import uuid
 import os
 
@@ -16,9 +16,8 @@ class ContextService:
     def __init__(self):
         self.similarity_threshold = 0.25  # Lower threshold for broader supplement queries
         self.default_top_k = 5
-        self.company_uuid = os.getenv("COMPANY_UUID", "fc7e5ef0-2362-4619-8e60-b3ebe867ade2")
 
-    async def build_sections(self, intents: List[str], query: str, analysis: dict = None) -> Dict[str, List[str]]:
+    async def build_sections(self, intents: List[str], query: str, analysis: dict = None, uuid: Optional[str] = None) -> Dict[str, List[str]]:
         sections: Dict[str, List[str]] = {}
 
         # Extract analysis data for intelligent context selection
@@ -34,7 +33,7 @@ class ContextService:
             sections["PRODUCT_DATA"] = await self._build_product_data(query)
             
         if has_company_intent:
-            sections["COMPANY_DATA"] = await self._build_company_data()
+            sections["COMPANY_DATA"] = await self._build_company_data(uuid)
             
         ## CHANGE HERE IF NEEDED
         # If general query with no specific intents, provide both contexts to be helpful
@@ -48,8 +47,8 @@ class ContextService:
     async def _build_product_data(self, query: str) -> List[str]:
         return await self.get_product_context(query, limit=5)
 
-    async def _build_company_data(self) -> List[str]:
-        return await self.get_company_context()
+    async def _build_company_data(self, uuid: Optional[str] = None) -> List[str]:
+        return await self.get_company_context(uuid)
     
     async def get_product_context(self, query: str, limit: int = 5) -> List[str]:
         """Get relevant context from products table only using vector search"""
@@ -80,7 +79,7 @@ class ContextService:
             print(f"Product context retrieval failed: {e}")
             return []
     
-    async def get_company_context(self) -> List[str]:
+    async def get_company_context(self, uuid: Optional[str] = None) -> List[str]:
         """Get all company information directly (no vector search needed)"""
         try:
             pool = get_pool("crm")
@@ -90,9 +89,9 @@ class ContextService:
                     SELECT company_info as content 
                     FROM company_info
                     WHERE user_uuid = $1
-                """, self.company_uuid)
+                """, str(uuid))
 
-                
+                print(f"🔍 Company context results: {company_results}")
                 # Extract and compact a few most recent items
                 raw = [result['content'] for result in company_results]
                 return self._compact_snippets(raw)

@@ -28,6 +28,7 @@ class OpenAIService:
         customer_summary: str = None,
         kb_sections: Optional[Dict[str, List[str]]] = None,
         intents: Optional[List[str]] = None,
+        uuid: Optional[str] = None, #testing purpose only needed to be remove
     ) -> str:
         """
         Generate AI response using OpenAI with intelligent memory management
@@ -38,7 +39,7 @@ class OpenAIService:
         """
         
         # Get custom system prompt from database or use default
-        custom_base_prompt = await self._get_system_prompt_from_db()
+        custom_base_prompt = await self._get_system_prompt_from_db(uuid)
         
         # Build system prompt with context and customer memory
         system_prompt = self._build_system_prompt(
@@ -74,7 +75,7 @@ class OpenAIService:
         except Exception as e:
             raise Exception(f"OpenAI API error: {str(e)}")
     
-    async def _get_system_prompt_from_db(self) -> Optional[str]:
+    async def _get_system_prompt_from_db(self, uuid: Optional[str] = None) -> Optional[str]:
         """Get custom system prompt from database, return None if not set"""
         try:
             pool = get_pool("crm")
@@ -85,7 +86,7 @@ class OpenAIService:
                     FROM company_info
                     WHERE user_uuid = $1 AND system_prompt IS NOT NULL AND system_prompt != ''
                     LIMIT 1
-                """, os.getenv("COMPANY_UUID", "fc7e5ef0-2362-4619-8e60-b3ebe867ade2"))
+                """, str(uuid))
                 
                 if result:
                     print(f"📝 Using custom system prompt from database")
