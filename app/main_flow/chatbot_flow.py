@@ -53,7 +53,7 @@ class ChatbotFlowService:
         else:
             print(f"🆕 New customer - no memory available")
         
-        # Step 3: Analyze message intent and expand query
+        # Step 3: Analyze message intent and query augmentation (expanded_query)
         print("🔎 Analyzing message intent...")
         analysis = await understanding_service.analyze(
             current_message=request.message,
