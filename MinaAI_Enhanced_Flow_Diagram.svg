@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="userGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE4B5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="routerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6F3FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B3D9FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="memoryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C8E6C9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="understandingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCE4EC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F8BBD9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="contextGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BBDEFB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="embeddingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F1F8E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DCEDC8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFCC02;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="llmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF8E1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE082;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="responseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A5D6A7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="asyncGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F3E5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CE93D8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="700" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2C3E50">MinaAI Enhanced RAG Chatbot Application Flow</text>
+  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#7F8C8D">Hybrid Memory System | Vector Search | Intelligent Context Selection</text>
+
+  <!-- User Question -->
+  <rect x="50" y="80" width="140" height="80" rx="10" fill="url(#userGrad)" stroke="#D2691E" stroke-width="2"/>
+  <text x="120" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8B4513">User Question</text>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B4513">"What supplements</text>
+  <text x="120" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B4513">do you sell?"</text>
+  <text x="120" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#A0522D">📱 Phone: 60123456789</text>
+
+  <!-- Chat Router -->
+  <rect x="230" y="80" width="140" height="80" rx="10" fill="url(#routerGrad)" stroke="#4682B4" stroke-width="2"/>
+  <text x="300" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2F4F4F">Chat Router</text>
+  <text x="300" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2F4F4F">Receive Request</text>
+  <text x="300" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2F4F4F">Extract phone#</text>
+  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4682B4">🚦 /api/chat</text>
+
+  <!-- Memory Service -->
+  <rect x="410" y="80" width="160" height="120" rx="10" fill="url(#memoryGrad)" stroke="#228B22" stroke-width="2"/>
+  <text x="490" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#006400">Memory Service</text>
+  <text x="490" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">✅ Optimized Single Query</text>
+  <text x="490" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">📋 Check 24hr rule</text>
+  <text x="490" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">🔄 Hybrid Memory Logic</text>
+  <text x="490" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">🆔 Generate session ID</text>
+  <text x="490" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#228B22">📊 Turns 1-5: Recent only</text>
+  <text x="490" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#228B22">📈 Turns 6+: Hybrid mode</text>
+
+  <!-- Understanding Service -->
+  <rect x="610" y="80" width="160" height="120" rx="10" fill="url(#understandingGrad)" stroke="#DC143C" stroke-width="2"/>
+  <text x="690" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8B0000">Understanding Service</text>
+  <text x="690" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B0000">🧠 GPT-4o-mini Analysis</text>
+  <text x="690" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B0000">🎯 Intent Classification</text>
+  <text x="690" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B0000">🏷️ Entity Extraction</text>
+  <text x="690" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B0000">📝 Query Expansion</text>
+  <text x="690" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#DC143C">✨ No hardcoded keywords</text>
+  <text x="690" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#DC143C">🎪 Smart intent detection</text>
+
+  <!-- Context Service -->
+  <rect x="810" y="80" width="160" height="120" rx="10" fill="url(#contextGrad)" stroke="#1E90FF" stroke-width="2"/>
+  <text x="890" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#191970">Context Service</text>
+  <text x="890" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#191970">🔍 Analyze Intent</text>
+  <text x="890" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#191970">🎛️ Smart KB Selection</text>
+  <text x="890" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#191970">📦 Product + Company?</text>
+  <text x="890" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#191970">🏢 Company topics check</text>
+  <text x="890" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1E90FF">🚫 No hardcoded keywords</text>
+  <text x="890" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#1E90FF">🤖 AI-driven selection</text>
+
+  <!-- Embedding Service -->
+  <rect x="50" y="240" width="160" height="100" rx="10" fill="url(#embeddingGrad)" stroke="#32CD32" stroke-width="2"/>
+  <text x="130" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#006400">Embedding Service</text>
+  <text x="130" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">🔤 text-embedding-3-large</text>
+  <text x="130" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">🧮 Generate embeddings</text>
+  <text x="130" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">🎯 Vector similarity search</text>
+  <text x="130" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#32CD32">🎚️ Threshold: 0.25</text>
+
+  <!-- PostgreSQL Database -->
+  <rect x="250" y="240" width="180" height="140" rx="10" fill="url(#dbGrad)" stroke="#FF8C00" stroke-width="2"/>
+  <text x="340" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8B4513">PostgreSQL Database</text>
+  <text x="340" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B4513">🛍️ Products Table</text>
+  <text x="340" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#B8860B">📊 Embeddings column (pgvector)</text>
+  <text x="340" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B4513">🏢 Company Info</text>
+  <text x="340" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B4513">💬 Chat History</text>
+  <text x="340" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8B4513">🧠 Customer Memory</text>
+  <text x="340" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#B8860B">🔗 Session tracking</text>
+  <text x="340" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#B8860B">📈 No data deletion</text>
+
+  <!-- KB Results -->
+  <rect x="470" y="240" width="180" height="140" rx="10" fill="#F0F8FF" stroke="#4169E1" stroke-width="2"/>
+  <text x="560" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#191970">Knowledge Base Results</text>
+  <text x="560" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#191970">📦 PRODUCT_KB</text>
+  <text x="560" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4169E1">1. MetaboPro+ - RM210</text>
+  <text x="560" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4169E1">2. Night Trim - RM199</text>
+  <text x="560" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4169E1">3. Max Burn - RM189</text>
+  <text x="560" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#191970">🏢 COMPANY_KB</text>
+  <text x="560" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4169E1">VitaLean Wellness info</text>
+  <text x="560" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4169E1">📋 Max 5 products per query</text>
+
+  <!-- OpenAI Service -->
+  <rect x="690" y="240" width="160" height="140" rx="10" fill="url(#llmGrad)" stroke="#FFD700" stroke-width="2"/>
+  <text x="770" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#B8860B">OpenAI Service</text>
+  <text x="770" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#B8860B">🤖 GPT-4</text>
+  <text x="770" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#B8860B">📋 System prompt</text>
+  <text x="770" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#B8860B">💭 KB context +</text>
+  <text x="770" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#B8860B">📚 Conversation history</text>
+  <text x="770" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#B8860B">🧠 Customer summary</text>
+  <text x="770" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#B8860B">🎯 Generate response</text>
+  <text x="770" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#DAA520">🚀 Multiple LLM calls for accuracy</text>
+
+  <!-- Response -->
+  <rect x="890" y="240" width="140" height="100" rx="10" fill="url(#responseGrad)" stroke="#228B22" stroke-width="2"/>
+  <text x="960" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#006400">Response</text>
+  <text x="960" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">🔙 Return to user</text>
+  <text x="960" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">💾 Save async</text>
+  <text x="960" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#006400">📊 datatollm</text>
+  <text x="960" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#228B22">🆔 session_id</text>
+
+  <!-- Async Background -->
+  <rect x="1070" y="240" width="160" height="140" rx="10" fill="url(#asyncGrad)" stroke="#9932CC" stroke-width="2"/>
+  <text x="1150" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4B0082">Async Background</text>
+  <text x="1150" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4B0082">💾 Save conversation</text>
+  <text x="1150" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4B0082">📊 Update customer stats</text>
+  <text x="1150" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4B0082">🧠 Trigger summarization</text>
+  <text x="1150" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4B0082">📈 (at 6+ turns)</text>
+  <text x="1150" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4B0082">📝 Create long-term memory</text>
+  <text x="1150" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9932CC">🔄 800-1000 tokens summary</text>
+  <text x="1150" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9932CC">💾 No data deletion</text>
+
+  <!-- Arrows -->
+  <!-- User to Router -->
+  <line x1="190" y1="120" x2="230" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Router to Memory -->
+  <line x1="370" y1="120" x2="410" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Memory to Understanding -->
+  <line x1="570" y1="120" x2="610" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Understanding to Context -->
+  <line x1="770" y1="120" x2="810" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Context to Embedding -->
+  <line x1="890" y1="200" x2="890" y2="220" stroke="#333" stroke-width="2"/>
+  <line x1="890" y1="220" x2="130" y2="220" stroke="#333" stroke-width="2"/>
+  <line x1="130" y1="220" x2="130" y2="240" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Embedding to Database -->
+  <line x1="210" y1="290" x2="250" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Database to KB Results -->
+  <line x1="430" y1="310" x2="470" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- KB Results to OpenAI -->
+  <line x1="650" y1="310" x2="690" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- OpenAI to Response -->
+  <line x1="850" y1="290" x2="890" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Response to Async -->
+  <line x1="1030" y1="290" x2="1070" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Async back to Database -->
+  <line x1="1150" y1="380" x2="1150" y2="400" stroke="#333" stroke-width="2"/>
+  <line x1="1150" y1="400" x2="340" y2="400" stroke="#333" stroke-width="2"/>
+  <line x1="340" y1="400" x2="340" y2="380" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Key Features & Optimizations -->
+  <rect x="50" y="450" width="1300" height="320" rx="15" fill="#F8F9FA" stroke="#2C3E50" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="700" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2C3E50">🔧 Key Features &amp; Optimizations</text>
+
+  <!-- Feature boxes -->
+  <!-- Intelligent Context -->
+  <rect x="80" y="500" width="250" height="110" rx="10" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="205" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C2185B">🧠 Intelligent Context</text>
+  <text x="90" y="545" font-family="Arial, sans-serif" font-size="11" fill="#880E4F">• AI-powered intent analysis (no keywords)</text>
+  <text x="90" y="560" font-family="Arial, sans-serif" font-size="11" fill="#880E4F">• Smart KB section selection</text>
+  <text x="90" y="575" font-family="Arial, sans-serif" font-size="11" fill="#880E4F">• GPT-4o-mini understanding service</text>
+  <text x="90" y="590" font-family="Arial, sans-serif" font-size="11" fill="#880E4F">• Entity extraction &amp; query expansion</text>
+
+  <!-- Performance -->
+  <rect x="350" y="500" width="250" height="110" rx="10" fill="#E8F5E8" stroke="#4CAF50" stroke-width="2"/>
+  <text x="475" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32">⚡ Performance</text>
+  <text x="360" y="545" font-family="Arial, sans-serif" font-size="11" fill="#1B5E20">• Single optimized database query</text>
+  <text x="360" y="560" font-family="Arial, sans-serif" font-size="11" fill="#1B5E20">• Async background operations</text>
+  <text x="360" y="575" font-family="Arial, sans-serif" font-size="11" fill="#1B5E20">• Vector similarity search (pgvector)</text>
+  <text x="360" y="590" font-family="Arial, sans-serif" font-size="11" fill="#1B5E20">• Session-based memory management</text>
+
+  <!-- Token Efficiency -->
+  <rect x="620" y="500" width="250" height="110" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="745" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#EF6C00">💫 Token Efficiency</text>
+  <text x="630" y="545" font-family="Arial, sans-serif" font-size="11" fill="#BF360C">• Max 5 products per query</text>
+  <text x="630" y="560" font-family="Arial, sans-serif" font-size="11" fill="#BF360C">• Numbered format for LLM parsing</text>
+  <text x="630" y="575" font-family="Arial, sans-serif" font-size="11" fill="#BF360C">• 500 char limit per snippet</text>
+  <text x="630" y="590" font-family="Arial, sans-serif" font-size="11" fill="#BF360C">• Smart content truncation</text>
+
+  <!-- Malaysia-First -->
+  <rect x="890" y="500" width="250" height="110" rx="10" fill="#E1F5FE" stroke="#03A9F4" stroke-width="2"/>
+  <text x="1015" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0277BD">🇲🇾 Malaysia-First</text>
+  <text x="900" y="545" font-family="Arial, sans-serif" font-size="11" fill="#01579B">• Asia/Kuala_Lumpur timezone</text>
+  <text x="900" y="560" font-family="Arial, sans-serif" font-size="11" fill="#01579B">• 24-hour session rule</text>
+  <text x="900" y="575" font-family="Arial, sans-serif" font-size="11" fill="#01579B">• Local business context</text>
+  <text x="900" y="590" font-family="Arial, sans-serif" font-size="11" fill="#01579B">• Ringgit pricing (RM)</text>
+
+  <!-- Vector Search -->
+  <rect x="80" y="630" width="250" height="110" rx="10" fill="#E8EAF6" stroke="#3F51B5" stroke-width="2"/>
+  <text x="205" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#303F9F">🔍 Vector Search</text>
+  <text x="90" y="675" font-family="Arial, sans-serif" font-size="11" fill="#1A237E">• Similarity threshold: 0.25</text>
+  <text x="90" y="690" font-family="Arial, sans-serif" font-size="11" fill="#1A237E">• pgvector embeddings</text>
+  <text x="90" y="705" font-family="Arial, sans-serif" font-size="11" fill="#1A237E">• text-embedding-3-large model</text>
+  <text x="90" y="720" font-family="Arial, sans-serif" font-size="11" fill="#1A237E">• Product-specific retrieval</text>
+
+  <!-- Multi-LLM Architecture -->
+  <rect x="350" y="630" width="250" height="110" rx="10" fill="#FFF8E1" stroke="#FFC107" stroke-width="2"/>
+  <text x="475" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F57F17">🤖 Multi-LLM Architecture</text>
+  <text x="360" y="675" font-family="Arial, sans-serif" font-size="11" fill="#E65100">• GPT-4o-mini: Understanding</text>
+  <text x="360" y="690" font-family="Arial, sans-serif" font-size="11" fill="#E65100">• GPT-4: Final response</text>
+  <text x="360" y="705" font-family="Arial, sans-serif" font-size="11" fill="#E65100">• GPT-3.5-turbo: Summarization</text>
+  <text x="360" y="720" font-family="Arial, sans-serif" font-size="11" fill="#E65100">• Cost-optimized pipeline</text>
+
+  <!-- Memory Management -->
+  <rect x="620" y="630" width="250" height="110" rx="10" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <text x="745" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7B1FA2">🧠 Memory Management</text>
+  <text x="630" y="675" font-family="Arial, sans-serif" font-size="11" fill="#4A148C">• Hybrid memory system</text>
+  <text x="630" y="690" font-family="Arial, sans-serif" font-size="11" fill="#4A148C">• Auto-summarization at 6+ turns</text>
+  <text x="630" y="705" font-family="Arial, sans-serif" font-size="11" fill="#4A148C">• Complete conversation history</text>
+  <text x="630" y="720" font-family="Arial, sans-serif" font-size="11" fill="#4A148C">• Customer profile building</text>
+
+  <!-- Real-time Flexibility -->
+  <rect x="890" y="630" width="250" height="110" rx="10" fill="#E0F2F1" stroke="#009688" stroke-width="2"/>
+  <text x="1015" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00695C">⚡ Real-time Flexibility</text>
+  <text x="900" y="675" font-family="Arial, sans-serif" font-size="11" fill="#004D40">• Context-aware responses</text>
+  <text x="900" y="690" font-family="Arial, sans-serif" font-size="11" fill="#004D40">• Mixed query handling</text>
+  <text x="900" y="705" font-family="Arial, sans-serif" font-size="11" fill="#004D40">• Dynamic content selection</text>
+  <text x="900" y="720" font-family="Arial, sans-serif" font-size="11" fill="#004D40">• Human-like conversations</text>
+
+  <!-- Footer -->
+  <text x="700" y="790" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#2C3E50">Built for VitaLean Wellness - High-performance RAG chatbot with hybrid memory &amp; intelligent context selection</text>
+  
+  <!-- Memory Strategy Details -->
+  <rect x="200" y="820" width="1000" height="120" rx="10" fill="#F8F9FA" stroke="#6C757D" stroke-width="1"/>
+  <text x="700" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#495057">📊 Enhanced Memory Strategy</text>
+  
+  <rect x="220" y="860" width="230" height="70" rx="5" fill="#E3F2FD" stroke="#2196F3" stroke-width="1"/>
+  <text x="335" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1976D2">Turns 1-5: Recent Only</text>
+  <text x="230" y="900" font-family="Arial, sans-serif" font-size="10" fill="#1565C0">• Last 5 conversation turns</text>
+  <text x="230" y="915" font-family="Arial, sans-serif" font-size="10" fill="#1565C0">• Fast response time</text>
+  
+  <rect x="470" y="860" width="230" height="70" rx="5" fill="#E8F5E8" stroke="#4CAF50" stroke-width="1"/>
+  <text x="585" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#388E3C">Turns 6-10: Hybrid Mode</text>
+  <text x="480" y="900" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32">• Last 5 turns + AI summary</text>
+  <text x="480" y="915" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32">• Complete context coverage</text>
+  
+  <rect x="720" y="860" width="230" height="70" rx="5" fill="#FFF3E0" stroke="#FF9800" stroke-width="1"/>
+  <text x="835" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F57C00">Turns 11+: Advanced Hybrid</text>
+  <text x="730" y="900" font-family="Arial, sans-serif" font-size="10" fill="#EF6C00">• Last 5 turns + rich summary</text>
+  <text x="730" y="915" font-family="Arial, sans-serif" font-size="10" fill="#EF6C00">• Long-term relationship memory</text>
+  
+  <rect x="970" y="860" width="200" height="70" rx="5" fill="#FCE4EC" stroke="#E91E63" stroke-width="1"/>
+  <text x="1070" y="880" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#C2185B">24h+ Gap: Resume</text>
+  <text x="980" y="900" font-family="Arial, sans-serif" font-size="10" fill="#AD1457">• New session ID</text>
+  <text x="980" y="915" font-family="Arial, sans-serif" font-size="10" fill="#AD1457">• Preserve all history</text>
+
+  <!-- Performance Metrics -->
+  <text x="700" y="970" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#495057">🚀 Performance Metrics: 1 DB Query | &lt;100ms Memory | Vector Search | 800-1000 Token Summaries | Zero Data Loss</text>
+</svg>
