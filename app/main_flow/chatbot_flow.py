@@ -72,6 +72,9 @@ class ChatbotFlowService:
             uuid=request.uuid #testing purpose only needed to be remove
         )
         
+        print(f"conversation_history{conversation_history}")
+        print(f"customer_summary{customer_summary}")
+        
         # Step 5: Generate AI response
         print("🤖 Generating OpenAI response...")
         ai_response = await openai_service.generate_response(
@@ -82,7 +85,7 @@ class ChatbotFlowService:
             intents=intents,
             uuid=request.uuid #testing purpose only needed to be remove
         )
-        print(f"✅ AI Response generated: {len(ai_response['response'])} chars")
+        print(f"✅ AI Response generated: {len(ai_response)} chars")
         
         # Step 6: Calculate metrics and prepare response
         response_time_ms = int((time.time() - start_time) * 1000)
